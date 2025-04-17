@@ -1,0 +1,138 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Poppins',sans-serif;
+  background-color: rgb(240, 240, 240);
+  height: 100vh;
+  margin: 0;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cities{
+  width: 400px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgb(240, 240, 240);
+}
+
+.cities:hover{
+  border: 1px solid rgb(220, 120, 80);
+}
+
+.cities:hover img{
+    transform: scale(1.1);
+}
+
+img{
+  width: 100%;
+  height: 240px;
+  transition: transform 0.3s ease;
+  display: block;
+  object-fit: fill;
+}
+
+#header{
+  font-size: 44px;
+  font-weight: bold;
+  color: rgb(0, 0, 80);
+}
+
+.city-header{
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 80);
+}
+
+.city-desc{
+  font-size: 16px;
+  margin: 0;
+  width: 100%;
+  height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.txt-area{
+  padding: 10px 30px 30px 30px;
+}
+
+.img-div{
+  overflow: hidden;
+}
+
+#pages{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button{
+  font-size: 16px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 4px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid rgb(240, 240, 240);
+}
+
+button:active{
+  background-color: white;
+  border: 1px solid rgb(220, 120, 80);
+  font-weight: bold;
+}
+
+.active{
+  background-color: white;
+  border: 1px solid rgb(220, 120, 80);
+  font-weight: bold;
+}
+
+.left-right{
+  color: rgb(220, 120, 80);
+  font-weight: bold;
+}
+
+.left-right:active{
+  border: 1px solid rgb(240, 240, 240);
+  background-color: transparent;
+}
+
+@media (max-width: 1750px) {
+  #container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body{
+    height: auto;
+  }
+}
+
+@media (max-width: 870px) {
+  #container{
+    grid-template-columns: 1fr;
+  }
+
+  body{
+    height: auto;
+  }
+}
+
+@media (max-height: 500px){
+  body{
+    height: auto;
+  }
+}
