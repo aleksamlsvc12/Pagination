@@ -11,12 +11,12 @@ body{
 
 #container{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
 }
 
 .cities{
-  width: 400px;
-  margin: 20px;
+  width: 350px;
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
@@ -41,20 +41,21 @@ img{
 }
 
 #header{
-  font-size: 44px;
+  font-size: xx-large;
   font-weight: bold;
   color: rgb(0, 0, 80);
 }
 
 .city-header{
-  font-size: 24px;
+  font-size: large;
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 10px;
   color: rgb(0, 0, 80);
 }
 
 .city-desc{
-  font-size: 16px;
+  font-size: small;
   margin: 0;
   width: 100%;
   height: 54px;
@@ -121,18 +122,12 @@ button:active{
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 768px) {
   #container{
     grid-template-columns: 1fr;
   }
 
-  body{
-    height: auto;
-  }
-}
-
-@media (max-height: 500px){
-  body{
-    height: auto;
+  .cities{
+    width: 320px;
   }
 }
